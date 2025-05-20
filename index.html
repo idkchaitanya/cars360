@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Cars360</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Cars360</div>
+    <nav>
+      <button id="leaderboardBtn">Leaderboard</button>
+      <button id="watchlistBtn" style="display:none">Watchlist</button>
+      <button id="addCarBtn" style="display:none">Add Car</button>
+      <button id="loginBtn">Login</button>
+      <button id="logoutBtn" style="display:none;">Logout</button>
+      <button id="modeToggle" aria-label="Toggle dark/light mode">🌙</button>
+    </nav>
+  </header>
+  <main>
+    <section id="carGrid" class="car-grid"></section>
+    <section id="leaderboardPage" class="hidden">
+      <h2>Leaderboard</h2>
+      <div class="filters">
+        <label>
+          Filter by Car:
+          <select id="carFilter"></select>
+        </label>
+        <label>
+          Sort by:
+          <select id="sortLeaderboard">
+            <option value="highest">Highest Bid</option>
+            <option value="recent">Most Recent</option>
+          </select>
+        </label>
+      </div>
+      <table id="leaderboardTable">
+        <thead>
+        <tr>
+          <th>Car</th>
+          <th>User</th>
+          <th>Bid</th>
+          <th>Time</th>
+        </tr>
+        </thead>
+        <tbody></tbody>
+      </table>
+      <button id="backToHomeLB">Back to Home</button>
+    </section>
+  </main>
+  <div id="modalOverlay" class="modal-overlay hidden"></div>
+  <div id="modal" class="modal hidden"></div>
+  <div id="toast" class="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
